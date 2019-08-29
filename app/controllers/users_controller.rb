@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.abc_username
+  end
+
   def new
+    @user = User.new
   end
 
   def create

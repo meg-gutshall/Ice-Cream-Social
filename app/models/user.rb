@@ -4,6 +4,8 @@ class User < ApplicationRecord
 
   has_many :ice_creams #that they have created
 
+  scope :abc_username, -> { order(:username) }
+
   validates :username, uniqueness: true,  presence: true
   validates :email, presence: true
 
